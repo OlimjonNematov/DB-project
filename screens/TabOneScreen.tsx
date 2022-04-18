@@ -1,15 +1,19 @@
-import { StyleSheet } from 'react-native';
-
-import EditScreenInfo from '../components/EditScreenInfo';
+import { StyleSheet, ScrollView } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
+import Form from '.';
+import Table from "./assignment4/table"
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+
+  const array=["row 1", "row2"];
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Choose one of the 3 options</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+       <ScrollView horizontal={true}>
+          <Form/>
+          {/* <Table array={array}/> */}
+       </ScrollView>
     </View>
   );
 }
