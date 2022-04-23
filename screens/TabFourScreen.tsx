@@ -2,14 +2,14 @@ import { StyleSheet, ScrollView } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+export default function TabFourScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
 
   const array=["row 1", "row2"];
 
   return (
     <View style={styles.container}>
        <ScrollView horizontal={true}>
-          <Text>1</Text>
+          <Text>4</Text>
        </ScrollView>
     </View>
   );
