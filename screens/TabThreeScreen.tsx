@@ -1,15 +1,16 @@
-import { StyleSheet, ScrollView } from 'react-native';
+import { BackHandler, StyleSheet, ScrollView, Button, Alert } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
+// import React, { BackHandler } from 'react-native';
 
 export default function TabThreeScreen({ navigation }: RootTabScreenProps<'TabThree'>) {
 
   const array=["row 1", "row2"];
-
+  
   return (
     <View style={styles.container}>
        <ScrollView horizontal={true}>
-          <Text>3</Text>
+            <Button style={styles.button} title='quit' onPress={()=>alert("You have quit the app, Good Bye!")}/>
        </ScrollView>
     </View>
   );
@@ -21,9 +22,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+  button: {
   },
   separator: {
     marginVertical: 30,

@@ -1,6 +1,7 @@
 import { StyleSheet, ScrollView } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
+import Store from '../components/Store';
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
 
@@ -9,7 +10,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
   return (
     <View style={styles.container}>
        <ScrollView horizontal={true}>
-          <Text>1</Text>
+          <Store />
        </ScrollView>
     </View>
   );
