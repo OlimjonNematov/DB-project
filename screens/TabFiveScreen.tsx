@@ -1,14 +1,15 @@
 import { StyleSheet, ScrollView } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
-import TableDisplay from "../components/Products"
 
-export default function TabTwoScreen({ navigation }: RootTabScreenProps<'TabTwo'>) {
+export default function TabFiveScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+
+  const array=["row 1", "row2"];
 
   return (
     <View style={styles.container}>
        <ScrollView horizontal={true}>
-          <TableDisplay />
+          <Text>5</Text>
        </ScrollView>
     </View>
   );
