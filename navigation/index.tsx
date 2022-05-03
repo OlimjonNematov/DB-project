@@ -104,22 +104,7 @@ function BottomTabNavigator() {
           // tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
-      <BottomTab.Screen
-        name='TabFour'
-        component={TabFourScreen}
-        options={{
-          title: 'Transactions',
-          // tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
-      />
-      <BottomTab.Screen
-        name="TabFive"
-        component={TabFiveScreen}
-        options={{
-          title: 'Sales Stats',
-          // tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
-      />
+    
     </BottomTab.Navigator>
   );
 }

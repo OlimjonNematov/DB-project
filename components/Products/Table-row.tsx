@@ -12,7 +12,7 @@ export default function Row(props:any) {
 
     const {name, purchase_price, sales_price, product_id} = props;
     
-    const onPut = ()=>{
+    const onEnd = ()=>{
       Axios.put('http://localhost:19007/api/put/products',{product_id:product_id}).then(()=>{
         alert(`Ended ${name}, ID: ${product_id}`);
       });
@@ -23,7 +23,7 @@ export default function Row(props:any) {
         <View style={styles.firstCell}><Text>{props.name}</Text></View>
         <View style={styles.cell}><Text>${props.purchase_price}</Text></View>
         <View style={styles.cell}><Text>${props.sales_price}</Text></View>
-        <View style={styles.cell}><Button color={"red"} title='End' onPress={onPut}/></View>
+        <View style={styles.cell}><Button color={"red"} title='End' onPress={onEnd}/></View>
         
     </View>
   );
